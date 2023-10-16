@@ -1,3 +1,8 @@
 * {
     border: 2px solid blue;
 }
+
+#mainFrame {
+    display: grid;  
+    grid-template-columns: 25% 25% 25% 25%;
+}
