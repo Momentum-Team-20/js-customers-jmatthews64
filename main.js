@@ -20,6 +20,14 @@ function buildCustomer (customerArray){
         + customer.name.last);
         box.appendChild(custName);
         console.log(custName);
+        //Add Customer address to box
+        let custAddress1 = document.createElement('div');
+        custAddress1.innerText = (customer.location.street.number 
+        + " " + customer.location.street.name);
+        box.appendChild(custAddress1);
+        let custAddress2 = document.createElement("div");
+        custAddress2.innerText = (`${customer.location.city}, 
+        ${customer.location.postcode}`);
     }
 }
 
