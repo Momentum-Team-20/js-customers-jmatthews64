@@ -1,6 +1,20 @@
 //Selecting the frame the customer thumbs will be created in.
 const customerContainer = document.querySelector("#mainFrame");
 
+// //Create a function to abbreviate states
+// function stateAbrv (stateName) {
+//     for (let state of stateName) {
+//         if(state.name) {
+//             console.log(state.abbreviation);
+//             return state.abbreviation;
+//         }
+//     }
+// }
+
+// stateAbrv(usStates);
+
+// console.log(nameToAbbr("UTAH"));
+
 function buildCustomer (customerArray){
     for (let customer of customerArray) {
         //Create a div container for each customer
@@ -13,13 +27,11 @@ function buildCustomer (customerArray){
         photo.src = customer.picture.thumbnail;
         photo.alt = "customer thumbnail img";
         box.appendChild(photo);
-        console.log(photo);
         //Create Customer Name in box
         let custName = document.createElement('h2');
         custName.innerText = (customer.name.first + " " 
         + customer.name.last);
         box.appendChild(custName);
-        console.log(custName);
         //Add Customer address to box
         let custAddress1 = document.createElement('div');
         custAddress1.innerText = (customer.location.street.number 
