@@ -6,3 +6,8 @@
     display: grid;  
     grid-template-columns: 25% 25% 25% 25%;
 }
+
+.customerThumb {
+    width: 100%;
+    height: auto;
+}
