@@ -9,9 +9,8 @@ function buildCustomer (customerArray){
         box.classList.add("customerThumb");
         //Append box to parent element
         customerContainer.appendChild(box);
-        console.log(box);
         
-        
+        //Create img for customer
         let photo = document.createElement('img');
         photo.src = customer.picture.thumbnail;
         photo.alt = "customer thumbnail img";
@@ -54,7 +53,7 @@ function buildCustomer (customerArray){
         //add date of birth to profile
         let dob = document.createElement("div");
         dob.classList.add("date");
-        dob.innerText = `DOB: ${customer.dob.date}`
+        dob.innerText = `DOB: ${moment(customer.dob.date).format("MMM Do YYYY")}`;
         box.appendChild(dob);
     }
 }
