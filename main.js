@@ -1,7 +1,7 @@
 //Selecting the frame the customer thumbs will be created in.
 const customerContainer = document.querySelector("#mainFrame");
 
-// //Create a function to abbreviate states
+//Create a function to abbreviate states
 // function stateAbrv (stateName) {
 //     for (let state of stateName) {
 //         if(state.name) {
@@ -11,9 +11,6 @@ const customerContainer = document.querySelector("#mainFrame");
 //     }
 // }
 
-// stateAbrv(usStates);
-
-// console.log(nameToAbbr("UTAH"));
 
 function buildCustomer (customerArray){
     for (let customer of customerArray) {
@@ -22,6 +19,7 @@ function buildCustomer (customerArray){
         //add class to the box
         box.classList.add("customerThumb");
         //Create a photo box
+        customerContainer.appendChild(box);
         console.log(box);
         let photo = document.createElement('img');
         photo.src = customer.picture.thumbnail;
@@ -38,8 +36,9 @@ function buildCustomer (customerArray){
         + " " + customer.location.street.name);
         box.appendChild(custAddress1);
         let custAddress2 = document.createElement("div");
-        custAddress2.innerText = (`${customer.location.city}, 
-        ${customer.location.postcode}`);
+        custAddress2.innerText = (`${customer.location.city}, ${nameToAbbr(customer.location.state)} ${customer.location.postcode}`);
+        box.appendChild(custAddress2);
+
     }
 }
 
