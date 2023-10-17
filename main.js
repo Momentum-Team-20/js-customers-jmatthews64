@@ -55,6 +55,12 @@ function buildCustomer (customerArray){
         dob.classList.add("date");
         dob.innerText = `DOB: ${moment(customer.dob.date).format("MMM Do YYYY")}`;
         box.appendChild(dob);
+
+        //Add registration dates
+        let regDate = document.createElement('div');
+        regDate.classList.add('date');
+        regDate.innerText = `Customer Since: ${moment(customer.registered.date).format("MMM Do YYYY")}`;
+        box.appendChild(regDate);
     }
 }
 
