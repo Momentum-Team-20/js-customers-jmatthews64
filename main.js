@@ -1,6 +1,14 @@
 //Selecting the frame the customer thumbs will be created in.
 const customerContainer = document.querySelector("#mainFrame");
 
+function capitalize(name){
+    let firstLetter = name.charAt(0);
+    let remainingLetters = name.substring(1);
+    firstLetter = firstLetter.toUpperCase();
+    return firstLetter + remainingLetters;
+}
+
+
 function buildCustomer (customerArray){
     for (let customer of customerArray) {
         //Create a div container for each customer
@@ -19,8 +27,8 @@ function buildCustomer (customerArray){
         //Create Customer Name in box
         let custName = document.createElement('h2');
         custName.classList.add("name");
-        custName.innerText = (customer.name.first + " " 
-        + customer.name.last);
+        custName.innerText = (capitalize(customer.name.first) + " " 
+        + capitalize(customer.name.last));
         box.appendChild(custName);
         
         //Add customer email with a class
