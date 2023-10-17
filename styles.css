@@ -4,7 +4,14 @@
 }
 
 .customerThumb {
+    display: flex;
+    flex-direction: column;
     width: auto;
     height: auto;
     min-width: 200px;
+    margin: 5px;
+}
+
+img {
+    justify-content: center;
 }

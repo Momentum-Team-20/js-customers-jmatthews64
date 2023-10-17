@@ -20,7 +20,7 @@ function buildCustomer (customerArray){
         
         //Create img for customer
         let photo = document.createElement('img');
-        photo.src = customer.picture.thumbnail;
+        photo.src = customer.picture.large;
         photo.alt = "customer thumbnail img";
         box.appendChild(photo);
         
