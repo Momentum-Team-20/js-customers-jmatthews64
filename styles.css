@@ -17,3 +17,17 @@ img {
     justify-content: center;
     border-radius: 70px 100px 70px 100px;
 }
+
+.email {
+    color: rgb(173, 173, 173);
+    margin-bottom: 20px;
+}
+
+.top {
+    margin-top: 5px;
+}
+
+.bottom {
+    margin-bottom: 5px;
+
+}

@@ -40,33 +40,39 @@ function buildCustomer (customerArray){
         //Add Customer address to box
         let custAddress1 = document.createElement('div');
         custAddress1.classList.add("address")
+        custAddress1.classList.add("top");
         custAddress1.innerText = (customer.location.street.number 
         + " " + customer.location.street.name);
         box.appendChild(custAddress1);
         let custAddress2 = document.createElement("div");
         custAddress2.classList.add("address");
+        custAddress2.classList.add("bottom");
         custAddress2.innerText = (`${customer.location.city}, ${nameToAbbr(customer.location.state)} ${customer.location.postcode}`);
         box.appendChild(custAddress2);
 
         //Add phone and cell numbers
         let phone = document.createElement("div");
         phone.classList.add("phone");
+        phone.classList.add("top");
         phone.innerText = `P: ${customer.phone}`;
         box.appendChild(phone);
         let cellPhone = document.createElement("div");
         cellPhone.classList.add("phone");
+        cellPhone.classList.add("bottom");
         cellPhone.innerText = `C: ${customer.cell}`;
         box.appendChild(cellPhone);
 
         //add date of birth to profile
         let dob = document.createElement("div");
         dob.classList.add("date");
+        dob.classList.add("top");
         dob.innerText = `DOB: ${moment(customer.dob.date).format("MMM Do YYYY")}`;
         box.appendChild(dob);
 
         //Add registration dates
         let regDate = document.createElement('div');
         regDate.classList.add('date');
+        regDate.classList.add("bottom");
         regDate.innerText = `Customer Since: ${moment(customer.registered.date).format("MMM Do YYYY")}`;
         box.appendChild(regDate);
     }
