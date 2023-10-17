@@ -3,11 +3,12 @@
 }
 
 #mainFrame {
-    display: grid;  
-    grid-template-columns: 25% 25% 25% 25%;
+    display: flex;  
+    flex-wrap: wrap;
 }
 
 .customerThumb {
-    width: 100%;
+    width: auto;
     height: auto;
+    min-width: 200px;
 }

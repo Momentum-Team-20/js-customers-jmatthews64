@@ -50,6 +50,12 @@ function buildCustomer (customerArray){
         cellPhone.classList.add("phone");
         cellPhone.innerText = `C: ${customer.cell}`;
         box.appendChild(cellPhone);
+
+        //add date of birth to profile
+        let dob = document.createElement("div");
+        dob.classList.add("date");
+        dob.innerText = `DOB: ${customer.dob.date}`
+        box.appendChild(dob);
     }
 }
 
