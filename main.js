@@ -7,10 +7,11 @@ function buildCustomer (customerArray){
         let box = document.createElement('div');
         //add class to the box
         box.classList.add("customerThumb");
-        
-        //Create a photo box
+        //Append box to parent element
         customerContainer.appendChild(box);
         console.log(box);
+        
+        
         let photo = document.createElement('img');
         photo.src = customer.picture.thumbnail;
         photo.alt = "customer thumbnail img";
@@ -40,6 +41,15 @@ function buildCustomer (customerArray){
         custAddress2.innerText = (`${customer.location.city}, ${nameToAbbr(customer.location.state)} ${customer.location.postcode}`);
         box.appendChild(custAddress2);
 
+        //Add phone and cell numbers
+        let phone = document.createElement("div");
+        phone.classList.add("phone");
+        phone.innerText = `P: ${customer.phone}`;
+        box.appendChild(phone);
+        let cellPhone = document.createElement("div");
+        cellPhone.classList.add("phone");
+        cellPhone.innerText = `C: ${customer.cell}`;
+        box.appendChild(cellPhone);
     }
 }
 
